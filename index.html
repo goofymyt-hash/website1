@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>GM movies</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">GM movies</div>
+    <div class="controls">
+      <input id="searchInput" type="search" placeholder="Search for movies/series..." />
+      <select id="categorySelect">
+        <option value="">All categories</option>
+        <option value="Film">Movies</option>
+        <option value="Serie">Series</option>
+        <option value="Dokumentar">Documentaries</option>
+      </select>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>Watch what you want, whenever you want</h1>
+    </section>
+
+    <section>
+      <h2></h2>
+      <div id="videoGrid" class="grid"></div>
+    </section>
+  </main>
+
+  <!-- Videospiller-modal -->
+  <div id="playerModal" class="modal hidden">
+    <div class="modal-content">
+      <button class="close" id="closeModal" aria-label="Lukk">✕</button>
+      <video id="videoPlayer" controls preload="metadata" poster="">
+        Your browser does not support the video tag.
+      </video>
+      <div class="meta">
+        <h3 id="videoTitle"></h3>
+        <p id="videoDescription"></p>
+      </div>
+    </div>
+    <div class="backdrop"></div>
+  </div>
+
+  <footer>
+    <small>© 2025 GM movies</small>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
